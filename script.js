@@ -3,6 +3,20 @@
  * Handles animations, interactions, form validation, and UI effects
  */
 
+window.addEventListener('load', function() {
+  const preloader = document.getElementById('preloader');
+
+  // Add a small delay to show the preloader
+  setTimeout(function() {
+    preloader.style.opacity = '0';
+    preloader.style.transition = 'opacity 0.5s ease'; 
+    setTimeout(function() {
+      preloader.style.display = 'none';
+    }, 500); // After fade out
+  }, 1800); // Keep preloader visible for 1.5 seconds
+});
+
+
 document.addEventListener('DOMContentLoaded', function() {
     // Current year for footer copyright
     document.getElementById('currentYear').textContent = new Date().getFullYear();

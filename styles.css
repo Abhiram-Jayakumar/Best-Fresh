@@ -61,6 +61,63 @@
     scroll-behavior: smooth;
     font-size: 16px;
   }
+  /* Preloader Background */
+  #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff8e1; /* Light background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+  
+
+/* Preloader Content Centering */
+.preloader-content {
+  text-align: center;
+}
+
+/* Logo Image */
+.preloader-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* Shop Name */
+.preloader-title {
+  font-size: 24px;
+  color: #5a3825;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Simple Loader Animation */
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #5a3825; /* Brown Top Border */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Keyframes for spin */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
   
   body {
     font-family: var(--font-primary);
@@ -69,6 +126,7 @@
     background-color: var(--color-white);
     overflow-x: hidden;
   }
+
   
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
@@ -182,6 +240,7 @@
   
   .btn-gold:hover {
     background-color: var(--color-gold-light);
+    color: white;
   }
   
   .btn-outline-light {
@@ -1166,7 +1225,7 @@
   }
 
   .caution{
-    color: bisque;
+    color: rgb(245, 201, 148);
   }
 
   .caution:hover{
